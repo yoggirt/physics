@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Physics Catalogue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Physics Catalogue</h1>
+        <label class="upload">
+            Open PDF
+            <input id="pdfInput" type="file" accept="application/pdf">
+        </label>
+        <span id="documentInfo">No PDF loaded</span>
+    </header>
+
+    <main>
+        <aside id="sidebar">
+            <h2>Documents</h2>
+            <div id="documentList"></div>
+        </aside>
+
+        <section id="viewer">
+            <div id="emptyState">
+                <h2>Open a PDF</h2>
+                <p>Your PDFs and annotations are stored locally in this browser.</p>
+            </div>
+            <div id="pages"></div>
+        </section>
+    </main>
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.54/pdf.min.mjs"
+            type="module"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
